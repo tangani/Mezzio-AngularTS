@@ -127,7 +127,7 @@ final class Versions
   'squizlabs/php_codesniffer' => '2.9.2@2acf168de78487db620ab4bc524135a13cfe6745',
   'theseer/tokenizer' => '1.2.0@75a63c33a8577608444246075ea0af0d052e452a',
   'webmozart/assert' => '1.9.1@bafc69caeb4d49c39fd0779086c03a3738cbb389',
-  'mezzio/mezzio-skeleton' => 'No version set (parsed as 1.0.0)@',
+  'mezzio/mezzio-skeleton' => 'dev-master@55316b068abc68685fe8caab360b93d7471b0a1d',
 );
 
     private function __construct()

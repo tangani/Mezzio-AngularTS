@@ -36,5 +36,5 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
 
-    // $app->get('/elements[/]', \Elements\Handler\ElementsReadHandler::class, 'elements');
+    // $app->get('/projects[/]', \Projects\Handler\ProjectsAuthHandler::class, 'projects');
 };

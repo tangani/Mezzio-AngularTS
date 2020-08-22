@@ -29,6 +29,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'ProxyManager\\' => array($vendorDir . '/ocramius/proxy-manager/src/ProxyManager'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src/Prophecy'),
+    'Projects\\' => array($baseDir . '/src/Projects/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'PackageVersions\\' => array($vendorDir . '/composer/package-versions-deprecated/src/PackageVersions'),
     'Neomerx\\Cors\\' => array($vendorDir . '/neomerx/cors-psr7/src'),

@@ -14,6 +14,9 @@ return [
     'dependencies' => [
         'factories' => [
             Elements\Handler\ElementsReadHandler::class => Elements\Handler\ElementsReadHandlerFactory::class,
+            Projects\Handler\ProjectsAuthHandler::class => Projects\Handler\ProjectsAuthHandlerFactory::class,
+            Projects\Handler\ProjectsReadHandler::class => Projects\Handler\ProjectsReadHandlerFactory::class,
+            Projects\Handler\ProjectsWriteHandler::class => Projects\Handler\ProjectsWriteHandlerFactory::class,
         ],
     ],
 ];
