@@ -35,12 +35,14 @@
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-escaper" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-eventmanager" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-httphandlerrunner" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-hydrator" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-servicemanager" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-stdlib" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-stratigility" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/laminas/laminas-zendframework-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/mezzio/mezzio" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/mezzio/mezzio-fastroute" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/mezzio/mezzio-hal" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/mezzio/mezzio-helpers" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/mezzio/mezzio-router" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/mezzio/mezzio-template" />
@@ -67,6 +69,7 @@
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/http-server-handler" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/http-server-middleware" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/link" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/roave/psr-container-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/code-unit" />
@@ -101,6 +104,7 @@
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/tuupola/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/webimpress/safe-writer" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/willdurand/negotiation" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

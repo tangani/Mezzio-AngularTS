@@ -100,6 +100,10 @@
       <path value="$PROJECT_DIR$/mezzio/vendor/tuupola/cors-middleware" />
       <path value="$PROJECT_DIR$/mezzio/vendor/tuupola/http-factory" />
       <path value="$PROJECT_DIR$/mezzio/vendor/neomerx/cors-psr7" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/mezzio/mezzio-hal" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/laminas/laminas-hydrator" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

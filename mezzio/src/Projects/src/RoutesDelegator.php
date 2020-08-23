@@ -11,7 +11,9 @@ class RoutesDelegator
     {
         $app = $callback();
 
-        $app->get('/projects[/]', Handler\ProjectsAuthHandler::class, 'projects');
+        $app->get('/login[/]', Handler\ProjectsAuthHandler::class, 'projects');
+        $app->post('/projects[/]', Handler\ProjectsCreateHandler::class, 'projects');
+        $app->get('/projects/[page/{page:\d+}]', Handler\ProjectsReadHandler::class, 'projects');
         // $app->get('/projects[/]', Handler\ProjectsAuthHandler::class, 'projects.read');
 
         return $app;

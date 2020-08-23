@@ -45,6 +45,8 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\ProjectsAuthHandler::class => Handler\ProjectsAuthHandlerFactory::class,
+                Handler\ProjectsCreateHandler::class => Handler\ProjectsCreateHandlerFactory::class,
+                Handler\ProjectsReadHandler::class => Handler\ProjectsReadHandlerFactory::class,
             ],
         ];
     }

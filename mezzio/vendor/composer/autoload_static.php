@@ -15,6 +15,8 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '07d7f1a47144818725fd8d91a907ac57' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/create_uploaded_file.php',
         'da94ac5d3ca7d2dbab84ce561ce72bfd' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_headers_from_sapi.php',
         '3d97c8dcdfba8cb85d3b34f116bb248b' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -31,8 +33,6 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'cc8e14526dc240491e17a838cb78508c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_server.legacy.php',
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '3f8ee9969da604d0f15c841b77b11450' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/double-pass-middleware.php',
         'ee5523a5d51d6d51030227439db1ef74' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/host.php',
         '5f6e29ca023a0bdefa2476adb465d527' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/middleware.php',
@@ -83,6 +83,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'Psr\\Link\\' => 9,
             'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
@@ -95,6 +96,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'N' => 
         array (
             'Neomerx\\Cors\\' => 13,
+            'Negotiation\\' => 12,
         ),
         'M' => 
         array (
@@ -102,6 +104,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
             'Mezzio\\Template\\' => 16,
             'Mezzio\\Router\\' => 14,
             'Mezzio\\Helper\\' => 14,
+            'Mezzio\\Hal\\' => 11,
             'Mezzio\\' => 7,
         ),
         'L' => 
@@ -110,6 +113,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
             'Laminas\\Stratigility\\' => 21,
             'Laminas\\Stdlib\\' => 15,
             'Laminas\\ServiceManager\\' => 23,
+            'Laminas\\Hydrator\\' => 17,
             'Laminas\\HttpHandlerRunner\\' => 26,
             'Laminas\\EventManager\\' => 21,
             'Laminas\\Escaper\\' => 16,
@@ -236,6 +240,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Psr\\Link\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/link/src',
+        ),
         'Psr\\Http\\Server\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
@@ -274,6 +282,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         array (
             0 => __DIR__ . '/..' . '/neomerx/cors-psr7/src',
         ),
+        'Negotiation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
+        ),
         'Mezzio\\Tooling\\' => 
         array (
             0 => __DIR__ . '/..' . '/mezzio/mezzio-tooling/src',
@@ -290,6 +302,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'Mezzio\\Helper\\' => 
         array (
             0 => __DIR__ . '/..' . '/mezzio/mezzio-helpers/src',
+        ),
+        'Mezzio\\Hal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mezzio/mezzio-hal/src',
         ),
         'Mezzio\\' => 
         array (
@@ -310,6 +326,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'Laminas\\ServiceManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-servicemanager/src',
+        ),
+        'Laminas\\Hydrator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-hydrator/src',
         ),
         'Laminas\\HttpHandlerRunner\\' => 
         array (

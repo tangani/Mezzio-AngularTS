@@ -15,6 +15,7 @@ use Mezzio\Router\Middleware\MethodNotAllowedMiddleware;
 use Mezzio\Router\Middleware\RouteMiddleware;
 use Psr\Container\ContainerInterface;
 use Tuupola\Middleware\CorsMiddleware;
+use \Mezzio\Helper\BodyParams\BodyParamsMiddleware;
 
 /**
  * Setup middleware pipeline:
@@ -67,6 +68,9 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     // - route-based authentication
     // - route-based validation
     // - etc.
+
+    // Added to allow parsing of BodyParams for PUT requests
+    $app->pipe(BodyParamsMiddleware::class);
 
     // Register the dispatch middleware in the middleware pipeline
     $app->pipe(DispatchMiddleware::class);

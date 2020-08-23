@@ -49,6 +49,19 @@ class Login
     protected $password;
 
     /**
+     * @param array $requestBody
+     * @throws \Exception
+     */
+    public function setUser(array $requestBody): void
+    {
+        $this->setName($requestBody['name']);
+        $this->setSurname($requestBody['surname']);
+        $this->setEmail($requestBody['email']);
+        $this->setUsername($requestBody['username']);
+        $this->setPassword($requestBody['password']);
+    }
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -119,6 +132,8 @@ class Login
     {
         $this->username = $username;
     }
+
+
 
     /**
      * @return string
