@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Projects;
 
+use Laminas\Hydrator\ReflectionHydrator;
+use Mezzio\Hal\Metadata\MetadataMap;
+use Mezzio\Hal\Metadata\RouteBasedCollectionMetadata;
+use Mezzio\Hal\Metadata\RouteBasedResourceMetadata;
+use Projects\Entity\Project;
+use Projects\Entity\ProjectCollection;
 use Projects\Handler;
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Doctrine\Persistence\Mapping\Driver\MappingDriverChain;
@@ -24,9 +30,10 @@ class ConfigProvider
     public function __invoke() : array
     {
         return [
-            'dependencies' => $this->getDependencies(),
-            'templates'    => $this->getTemplates(),
-            'doctrine'     => $this->getDoctrineEntities(),
+            'dependencies'     => $this->getDependencies(),
+            'templates'        => $this->getTemplates(),
+            'doctrine'         => $this->getDoctrineEntities(),
+            MetadataMap::class => $this->getHalMetadataMap(),
         ];
     }
 
@@ -81,4 +88,23 @@ class ConfigProvider
             ],
         ];
     }
+
+    public function getHalMetadataMap()
+    {
+        return [
+            [
+                '__class__' => RouteBasedResourceMetadata::class,
+                'resource_class' => Project::class,
+                'route' => 'projects.read',
+                'extractor' => ReflectionHydrator::class
+            ],
+            [
+                '__class__' => RouteBasedCollectionMetadata::class,
+                'collection_class' => ProjectCollection::class,
+                'collection_relation' => 'project',
+                'route' => 'projects.read',
+            ],
+        ];
+    }
+
 }

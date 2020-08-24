@@ -11,15 +11,18 @@ class RoutesDelegator
     {
         $app = $callback();
 
-        $app->post('/register[/]', Handler\ProjectsAuthHandler::class, 'projects.post');
+        $app->post('/signin[/]', Handler\ProjectsAuthHandler::class, 'user.create');
 
-        $app->post('/projects[/]', Handler\ProjectsCreateHandler::class, 'projects.post');
+        $app->post('/projects[/]', Handler\ProjectsCreateHandler::class, 'projects.create');
         // For a specific record
-        $app->get();
+        // $app->get('/projects/{id:\d+}[/]', Handler\ProjectsViewHandler::class, 'projects.view' );
         // For pagination usage
-        $app->get('/projects/[page/{page:\d+}]', Handler\ProjectsReadHandler::class, 'projects.read');
-        $app->put();
-        $app->delete();
+        $app->get('/projects/[?page={page:\d+}]', Handler\ProjectsReadHandler::class, 'projects.read');
+
+        // $app->put('/projects/{id:\d+}[/]', Handler\ProjectsUpdateHandler::class, 'projects.update');
+
+        // $app->delete('/projects/{id:\d+}[/]', Handler\ProjectDeleteHandler::class, 'projects.delete');
+
         // $app->get('/projects[/]', Handler\ProjectsAuthHandler::class, 'projects.read');
 
         return $app;

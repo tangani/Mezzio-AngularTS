@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Projects\Handler;
 
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Query;
-use Doctrine\ORM\Tools\Pagination\Paginator;
-use Laminas\Diactoros\Response\JsonResponse;
+use Mezzio\Hal\HalResponseFactory;
+use Mezzio\Hal\ResourceGenerator;
+use Projects\Entity\Project;
+use Projects\Entity\ProjectCollection;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -16,35 +17,36 @@ class ProjectsReadHandler implements RequestHandlerInterface
 {
     protected $entityManager;
     protected $pageCount;
+    protected $resourceGenerator;
+    protected $halResponseFactory;
 
-    public function __construct(EntityManager $entityManager, $pageCount)
+    public function __construct(
+        EntityManager $entityManager,
+        $pageCount,
+        ResourceGenerator $resourceGenerator,
+        HalResponseFactory $halResponseFactory
+    )
     {
-        $this->entityManager = $entityManager;
-        $this->pageCount = $pageCount;
+        $this->entityManager      = $entityManager;
+        $this->pageCount          = $pageCount;
+        $this->resourceGenerator  = $resourceGenerator;
+        $this->halResponseFactory = $halResponseFactory;
     }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        $query = $this->entityManager->getRepository('Projects\Entity\Project')
-            ->createQueryBuilder('c')
+        $repository = $this->entityManager->getRepository(Project::class);
+
+        $query = $repository
+            ->createQueryBuilder('p')
+            ->orderBy('p.start', 'ASC')
+            ->setMaxResults($this->pageCount)
             ->getQuery();
 
-        $paginator = new Paginator($query);
+        $paginator = new ProjectCollection($query);
 
-        $totalItems = count($paginator);
-        $currentPage = ($request->getAttribute('page')) ?: 1;
-        $totalPageCount = ceil($totalItems / $this->pageCount);
-        $nextPage = (($currentPage < $totalPageCount) ? $currentPage + 1 : $totalPageCount);
-        $previousPage = (($currentPage > 1) ? $currentPage - 1 : 1);
+        $resource = $this->resourceGenerator->fromObject($paginator, $request);
 
-        $records = $paginator
-            ->getQuery()
-            ->setFirstResult($this->pageCount * ($currentPage - 1))
-            ->setMaxResults($this->pageCount)
-            ->getResult(Query::HYDRATE_ARRAY);
-
-        $result['_embedded']['Projects'] = $records;
-
-        return new JsonResponse($result);
+        return $this->halResponseFactory->createResponse($request, $resource);
     }
 }
