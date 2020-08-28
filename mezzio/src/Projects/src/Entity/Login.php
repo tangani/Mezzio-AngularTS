@@ -52,6 +52,22 @@ class Login
      * @param array $requestBody
      * @throws \Exception
      */
+    public function getUser(array $requestBody): array
+    {
+        return [
+            'id'       => $this->getId(),
+            'name'     => $this->getName(),
+            'surname'  => $this->getSurname(),
+            'email'    => $this->getEmail(),
+            'username' => $this->getUsername(),
+            'password' => $this->getPassword()
+        ];
+    }
+
+    /**
+     * @param array $requestBody
+     * @throws \Exception
+     */
     public function setUser(array $requestBody): void
     {
         $this->setName($requestBody['name']);

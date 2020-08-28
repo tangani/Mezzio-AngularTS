@@ -11,19 +11,13 @@ class RoutesDelegator
     {
         $app = $callback();
 
-        $app->post('/signin[/]', Handler\ProjectsAuthHandler::class, 'user.create');
+        $app->post('/login/{id:[0-9A-Za-z]+}', Handler\ProjectsAuthHandler::class, 'login.read');
 
         $app->post('/projects[/]', Handler\ProjectsCreateHandler::class, 'projects.create');
-        // For a specific record
-        // $app->get('/projects/{id:\d+}[/]', Handler\ProjectsViewHandler::class, 'projects.view' );
-        // For pagination usage
-        $app->get('/projects/[?page={page:\d+}]', Handler\ProjectsReadHandler::class, 'projects.read');
 
-        // $app->put('/projects/{id:\d+}[/]', Handler\ProjectsUpdateHandler::class, 'projects.update');
+        $app->get('/project/{id:[0-9]}', Handler\ProjectsReadHandler::class, 'project.read');
 
-        // $app->delete('/projects/{id:\d+}[/]', Handler\ProjectDeleteHandler::class, 'projects.delete');
-
-        // $app->get('/projects[/]', Handler\ProjectsAuthHandler::class, 'projects.read');
+        $app->get('/projects/[?page={page:\d+}]', Handler\ProjectsListHandler::class, 'projects.list');
 
         return $app;
         // TODO: Implement __invoke() method.

@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Projects\Handler;
 
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Query;
-use Doctrine\ORM\Tools\Pagination\Paginator;
 use Laminas\Diactoros\Response\JsonResponse;
+use Mezzio\Hal\HalResponseFactory;
+use Mezzio\Hal\ResourceGenerator;
+use Projects\Entity\Login;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -15,29 +16,35 @@ use Psr\Http\Server\RequestHandlerInterface;
 class ProjectsAuthHandler implements RequestHandlerInterface
 {
     protected $entityManager;
+    protected $halResponseFactory;
+    protected $resourceGenerator;
 
-    public function __construct(EntityManager $entityManager)
+    public function __construct(
+        EntityManager $entityManager,
+        HalResponseFactory $halResponseFactory,
+        ResourceGenerator $resourceGenerator
+    )
     {
-        $this->entityManager = $entityManager;
+        $this->entityManager      = $entityManager;
+        $this->halResponseFactory = $halResponseFactory;
+        $this->resourceGenerator  = $resourceGenerator;
     }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
+        $username = $request->getAttribute('id', null);
+        $entityRepository = $this->entityManager->getRepository(Login::class);
+        $entity = $entityRepository->find($username);
 
-        $query = $this->entityManager->getRepository('Projects\Entity\Login')
-            ->createQueryBuilder('c')
-            ->getQuery();
+        if (empty($entity)) {
+            $result['_error']['error'] = 'not_found';
+            $result['_error']['error_description'] = 'Record not found';
 
-        $paginator = new Paginator($query);
-        $records = $paginator
-            ->getQuery()
-            ->getResult(Query::HYDRATE_ARRAY);
+            return new JsonResponse($result, 404);
+        }
 
-        return new JsonResponse($records);
+        $resource = $this->resourceGenerator->fromObject($entity, $request);
+        return  $this->halResponseFactory->createResponse($request, $resource);
 
-        /*
-        $result['_embeded'] = [1 => "test", 2 => "test2"];
-        return  new JsonResponse($result);
-        */
     }
 }

@@ -13,15 +13,14 @@ class ProjectsReadHandlerFactory
 {
     public function __invoke(ContainerInterface $container) : ProjectsReadHandler
     {
-        $entityManager = $container->get(EntityManager::class);
-        $resourceGenerator = $container->get(ResourceGenerator::class);
-        $halResponseFactory = $container->get(HalResponseFactory::class);
+        $container->get(EntityManager::class);
+        $container->get(ResourceGenerator::class);
+        $container->get(HalResponseFactory::class);
 
         return new ProjectsReadHandler(
-            $entityManager,
-            $container->get('config')['page_size'],
-            $resourceGenerator,
-            $halResponseFactory
+            $container->get(EntityManager::class),
+            $container->get(HalResponseFactory::class),
+            $container->get(ResourceGenerator::class)
         );
     }
 }

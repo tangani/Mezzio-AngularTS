@@ -8,6 +8,7 @@ use Laminas\Hydrator\ReflectionHydrator;
 use Mezzio\Hal\Metadata\MetadataMap;
 use Mezzio\Hal\Metadata\RouteBasedCollectionMetadata;
 use Mezzio\Hal\Metadata\RouteBasedResourceMetadata;
+use Projects\Entity\Login;
 use Projects\Entity\Project;
 use Projects\Entity\ProjectCollection;
 use Projects\Handler;
@@ -53,7 +54,10 @@ class ConfigProvider
             'factories'  => [
                 Handler\ProjectsAuthHandler::class => Handler\ProjectsAuthHandlerFactory::class,
                 Handler\ProjectsCreateHandler::class => Handler\ProjectsCreateHandlerFactory::class,
+
+                Handler\ProjectsLoginHandler::class => Handler\ProjectsLoginHandlerFactory::class,
                 Handler\ProjectsReadHandler::class => Handler\ProjectsReadHandlerFactory::class,
+                Handler\ProjectsListHandler::class => Handler\ProjectsListHandlerFactory::class,
             ],
         ];
     }
@@ -92,17 +96,24 @@ class ConfigProvider
     public function getHalMetadataMap()
     {
         return [
-            [
-                '__class__' => RouteBasedResourceMetadata::class,
-                'resource_class' => Project::class,
-                'route' => 'projects.read',
-                'extractor' => ReflectionHydrator::class
-            ],
+
             [
                 '__class__' => RouteBasedCollectionMetadata::class,
                 'collection_class' => ProjectCollection::class,
                 'collection_relation' => 'project',
-                'route' => 'projects.read',
+                'route' => 'projects.list',
+            ],
+            [
+                '__class__' => RouteBasedResourceMetadata::class,
+                'resource_class' => Project::class,
+                'route' => 'project.read',
+                'extractor' => ReflectionHydrator::class
+            ],
+            [
+                '__class__' => RouteBasedResourceMetadata::class,
+                'resource_class' => Login::class,
+                'route' => 'login.read',
+                'extractor' => ReflectionHydrator::class
             ],
         ];
     }
