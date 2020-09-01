@@ -29,7 +29,7 @@ class Login
     protected $name;
 
     /**
-     * @ORM\Column(type="string", nullable=false)
+     * @ORM\Column(type="string", nullable=false, unique=true)
      */
     protected $surname;
 

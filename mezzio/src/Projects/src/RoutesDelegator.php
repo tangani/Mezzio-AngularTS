@@ -11,7 +11,9 @@ class RoutesDelegator
     {
         $app = $callback();
 
-        $app->post('/login/{id:[0-9A-Za-z]+}', Handler\ProjectsAuthHandler::class, 'login.read');
+        // $app->post('/login/{id:[0-9A-Za-z]+}', Handler\ProjectsAuthHandler::class, 'login.read');
+        $app->post('/login/{username:[0-9A-Za-z]+}/{password:[0-9A-Za-z]+}', Handler\ProjectsAuthHandler::class, 'login.read');
+        // $app->post('/login/[?id={password:0-9A-Za-z}]', Handler\ProjectsAuthHandler::class, 'login.read');
 
         $app->post('/projects[/]', Handler\ProjectsCreateHandler::class, 'projects.create');
 
