@@ -1,0 +1,123 @@
+table {
+  width: 100%;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.project-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.project-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.project-row td {
+  border-bottom-width: 0;
+}
+
+.project-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.project-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.project-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.project-description {
+  padding: 16px;
+}
+
+.project-description-attribution {
+  opacity: 0.5;
+}
+
+.mat-row:hover {
+  background-color: deepskyblue;
+}
+
+flex-spacer {
+  flex: 1 1 auto;
+}
+
+$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+$primary-color-dark:   #512DA8;
+$primary-color:        #673AB7;
+$primary-color-light:  #D1C4E9;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FFC107;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+.background-primary {
+  background-color: $background-dark!important;
+}
+.background-accent {
+  background-color: $accent-color!important;
+}
+.text-floral-white {
+  color: floralwhite!important;
+}
+
+.project-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.project-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 0px;
+}
+
+.mat-column {
+  flex: none;
+  width: 250px;
+  margin-right: auto;
+}
+
+/*
+.project-container .mat-form-field + .mat-form-field {
+  margin-left: 18px;
+  margin-right: 20%;
+}
+*/
+
+mat-form-field {
+  margin-right: auto;
+}
+
+.invisible{
+  display: block;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.table-width{
+  margin:0;
+  padding:0;
+  border:0;
+  justify-content: center;
+}
