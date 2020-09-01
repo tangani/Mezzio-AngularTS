@@ -44,6 +44,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '12015786a5f2990d4244c42435db1ba0' => __DIR__ . '/..' . '/mezzio/mezzio/src/constants.php',
         '792a652af1b56b529053947cf6432b79' => __DIR__ . '/..' . '/mezzio/mezzio/src/constants.legacy.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2e9d21640ad7c858ec88b09bab927312' => __DIR__ . '/..' . '/roave/psr-container-doctrine/bc-namespace-shim.php',
     );
 
@@ -79,6 +80,9 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'R' => 
         array (
             'Roave\\PsrContainerDoctrine\\' => 27,
+            'Ramsey\\Uuid\\Doctrine\\' => 21,
+            'Ramsey\\Uuid\\' => 12,
+            'Ramsey\\Collection\\' => 18,
         ),
         'P' => 
         array (
@@ -156,6 +160,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'B' => 
         array (
             'Brick\\VarExporter\\' => 18,
+            'Brick\\Math\\' => 11,
         ),
         'A' => 
         array (
@@ -235,6 +240,18 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'Roave\\PsrContainerDoctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/roave/psr-container-doctrine/src',
+        ),
+        'Ramsey\\Uuid\\Doctrine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/uuid-doctrine/src',
+        ),
+        'Ramsey\\Uuid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Ramsey\\Collection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
         'Psr\\Log\\' => 
         array (
@@ -441,6 +458,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'Brick\\VarExporter\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/varexporter/src',
+        ),
+        'Brick\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brick/math/src',
         ),
         'App\\' => 
         array (
@@ -830,7 +851,6 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'PHPUnit\\Util\\FileLoader' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/FileLoader.php',
         'PHPUnit\\Util\\Filesystem' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Filesystem.php',
         'PHPUnit\\Util\\Filter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Filter.php',
-        'PHPUnit\\Util\\Getopt' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Getopt.php',
         'PHPUnit\\Util\\GlobalState' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/GlobalState.php',
         'PHPUnit\\Util\\InvalidDataSetException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/InvalidDataSetException.php',
         'PHPUnit\\Util\\Json' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Json.php',
@@ -986,6 +1006,12 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'PharIo\\Version\\VersionConstraintParser' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintParser.php',
         'PharIo\\Version\\VersionConstraintValue' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintValue.php',
         'PharIo\\Version\\VersionNumber' => __DIR__ . '/..' . '/phar-io/version/src/VersionNumber.php',
+        'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
+        'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
+        'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
+        'SebastianBergmann\\CliParser\\Parser' => __DIR__ . '/..' . '/sebastian/cli-parser/src/Parser.php',
+        'SebastianBergmann\\CliParser\\RequiredOptionArgumentMissingException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/RequiredOptionArgumentMissingException.php',
+        'SebastianBergmann\\CliParser\\UnknownOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/UnknownOptionException.php',
         'SebastianBergmann\\CodeCoverage\\BranchAndPathCoverageNotSupportedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/BranchAndPathCoverageNotSupportedException.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CrapIndex' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CrapIndex.php',

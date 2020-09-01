@@ -23,6 +23,9 @@ return array(
     'Symfony\\Component\\Stopwatch\\' => array($vendorDir . '/symfony/stopwatch'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Roave\\PsrContainerDoctrine\\' => array($vendorDir . '/roave/psr-container-doctrine/src'),
+    'Ramsey\\Uuid\\Doctrine\\' => array($vendorDir . '/ramsey/uuid-doctrine/src'),
+    'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
+    'Ramsey\\Collection\\' => array($vendorDir . '/ramsey/collection/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Link\\' => array($vendorDir . '/psr/link/src'),
     'Psr\\Http\\Server\\' => array($vendorDir . '/psr/http-server-handler/src', $vendorDir . '/psr/http-server-middleware/src'),
@@ -73,6 +76,7 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common', $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common', $vendorDir . '/doctrine/persistence/lib/Doctrine/Common', $vendorDir . '/doctrine/reflection/lib/Doctrine/Common'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Brick\\VarExporter\\' => array($vendorDir . '/brick/varexporter/src'),
+    'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'App\\' => array($baseDir . '/src/App/src'),
     'AppTest\\' => array($baseDir . '/test/AppTest'),
 );

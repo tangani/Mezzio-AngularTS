@@ -10,6 +10,7 @@ use Laminas\Diactoros\Response\JsonResponse;
 use Mezzio\Hal\HalResponseFactory;
 use Mezzio\Hal\ResourceGenerator;
 use Projects\Entity\Login;
+use Projects\Entity\Project;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -33,8 +34,9 @@ class ProjectsCreateHandler implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
+        /*
         $result = [];
-        $requestBody = $request->getParsedBody()['Request']['Login'];
+        $requestBody = $request->getParsedBody()['Request']['Project'];
 
         if (empty($requestBody)) {
             $result['_error']['error'] = 'missing_request';
@@ -43,7 +45,7 @@ class ProjectsCreateHandler implements RequestHandlerInterface
             return  new JsonResponse($result);
         }
 
-        $entity = new Login();
+        $entity = new Project();
 
         try {
             $entity->setUser($requestBody);
@@ -61,5 +63,6 @@ class ProjectsCreateHandler implements RequestHandlerInterface
         return  new JsonResponse($requestBody);
 
         // return $this->halResponseFactory->createResponse($request, $resource);
+        */
     }
 }

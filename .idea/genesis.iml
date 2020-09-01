@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/mezzio/src/Projects/src" isTestSource="false" packagePrefix="Projects\" />
       <sourceFolder url="file://$MODULE_DIR$/mezzio/src/App/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/brick/varexporter" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/container-interop/container-interop" />
@@ -71,7 +72,11 @@
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/http-server-middleware" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/link" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/ramsey/uuid-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/roave/psr-container-doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/cli-parser" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/code-unit" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/comparator" />

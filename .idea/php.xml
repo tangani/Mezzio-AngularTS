@@ -104,6 +104,11 @@
       <path value="$PROJECT_DIR$/mezzio/vendor/mezzio/mezzio-hal" />
       <path value="$PROJECT_DIR$/mezzio/vendor/psr/link" />
       <path value="$PROJECT_DIR$/mezzio/vendor/laminas/laminas-hydrator" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/ramsey/uuid-doctrine" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/sebastian/cli-parser" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

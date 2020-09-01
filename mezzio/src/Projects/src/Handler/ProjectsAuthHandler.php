@@ -52,7 +52,7 @@ class ProjectsAuthHandler implements RequestHandlerInterface
         // return new JsonResponse($records[0]);
 
         $username = $request->getAttribute('username', null);
-        $password = $request->getAttribute('password', null);
+        $password = $request->getAttribute('surname', null);
 
         if (in_array($username, $records[0])) {
             if (in_array($password, $records[0])) {
@@ -62,7 +62,7 @@ class ProjectsAuthHandler implements RequestHandlerInterface
             }
         } else {
             return new JsonResponse($records);
-            return new JsonResponse("Sorry username not found");
+            // return new JsonResponse("Sorry username not found");
         }
 
 

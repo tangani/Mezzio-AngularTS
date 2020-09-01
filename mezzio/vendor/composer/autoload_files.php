@@ -43,5 +43,6 @@ return array(
     '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
     '12015786a5f2990d4244c42435db1ba0' => $vendorDir . '/mezzio/mezzio/src/constants.php',
     '792a652af1b56b529053947cf6432b79' => $vendorDir . '/mezzio/mezzio/src/constants.legacy.php',
+    'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
     '2e9d21640ad7c858ec88b09bab927312' => $vendorDir . '/roave/psr-container-doctrine/bc-namespace-shim.php',
 );

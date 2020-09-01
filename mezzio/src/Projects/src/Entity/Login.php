@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Projects\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\Uuid;
+
 
 /**
  * https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/basic-mapping.html
@@ -15,11 +17,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Login
 {
     /**
-     * @var int
+     * @var Uuid
      *
-     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="uuid", unique=true)
+     * @ORM\GeneratedValue(strategy="CUSTOM")
+     * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
     protected $id;
 
@@ -55,7 +58,6 @@ class Login
     public function getUser(array $requestBody): array
     {
         return [
-            'id'       => $this->getId(),
             'name'     => $this->getName(),
             'surname'  => $this->getSurname(),
             'email'    => $this->getEmail(),
@@ -78,9 +80,9 @@ class Login
     }
 
     /**
-     * @return int
+     * @return Uuid
      */
-    public function getId(): int
+    public function getId(): Uuid
     {
         return $this->id;
     }
@@ -164,6 +166,7 @@ class Login
      */
     public function setPassword(string $password): void
     {
-        $this->password = $password;
+        $this->password = password_hash($password,
+            PASSWORD_DEFAULT, array('cost' => 9));
     }
 }
