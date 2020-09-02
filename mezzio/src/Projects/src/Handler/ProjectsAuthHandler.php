@@ -64,7 +64,7 @@ class ProjectsAuthHandler implements RequestHandlerInterface
                 $passCheck = password_verify('e583799b852467HWeirdWords7f0cb11ca3c3', $records[$start]["password"]);
                 if ($passCheck)
                 {
-                    $userId = 12;
+                    $userId = $username;
                     $secret = 'sec!ReT423*&';
                     $expiration = time() + 3600;
                     $issuer = 'localhost';
