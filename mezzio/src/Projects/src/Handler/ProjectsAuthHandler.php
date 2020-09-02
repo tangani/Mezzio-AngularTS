@@ -72,6 +72,7 @@ class ProjectsAuthHandler implements RequestHandlerInterface
                     $token = Token::create($userId, $secret, $expiration, $issuer);
 
                     return new JsonResponse($token);
+                    // return new JsonResponse($records[$start]);
                 } else {
                     return new JsonResponse($records[$start]["password"]);
                 }
