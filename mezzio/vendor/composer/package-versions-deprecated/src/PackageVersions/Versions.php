@@ -83,6 +83,7 @@ final class Versions
   'ramsey/collection' => '1.1.0@044184884e3c803e4cbb6451386cb71562939b18',
   'ramsey/uuid' => '4.1.1@cd4032040a750077205918c86049aa0f43d22947',
   'ramsey/uuid-doctrine' => '1.6.0@9facc4689547e72e03c1e18df4a0ee162b2778b0',
+  'rbdwllr/reallysimplejwt' => '3.1.0@15a1ff880d48948439d9397c182d9021fe53040e',
   'roave/psr-container-doctrine' => '2.2.0@a0b2de4388603b6369e790dd8adfef0238e7d058',
   'symfony/console' => 'v5.1.4@51ff337ce194bdc3d8db12b20ce8cd54ac9f71e9',
   'symfony/polyfill-ctype' => 'v1.18.1@1c302646f6efc070cd46856e600e5e0684d6b454',

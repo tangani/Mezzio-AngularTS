@@ -52,6 +52,7 @@
         "mezzio/mezzio-helpers": "^5.3",
         "ramsey/uuid": "^4.1",
         "ramsey/uuid-doctrine": "^1.6",
+        "rbdwllr/reallysimplejwt": "^3.1",
         "roave/psr-container-doctrine": "^2.2",
         "tuupola/cors-middleware": "^1.1"
     },

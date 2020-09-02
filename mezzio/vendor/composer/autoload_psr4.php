@@ -23,6 +23,7 @@ return array(
     'Symfony\\Component\\Stopwatch\\' => array($vendorDir . '/symfony/stopwatch'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Roave\\PsrContainerDoctrine\\' => array($vendorDir . '/roave/psr-container-doctrine/src'),
+    'ReallySimpleJWT\\' => array($vendorDir . '/rbdwllr/reallysimplejwt/src'),
     'Ramsey\\Uuid\\Doctrine\\' => array($vendorDir . '/ramsey/uuid-doctrine/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
     'Ramsey\\Collection\\' => array($vendorDir . '/ramsey/collection/src'),

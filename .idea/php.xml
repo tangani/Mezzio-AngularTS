@@ -109,6 +109,7 @@
       <path value="$PROJECT_DIR$/mezzio/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/mezzio/vendor/ramsey/uuid-doctrine" />
       <path value="$PROJECT_DIR$/mezzio/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/rbdwllr/reallysimplejwt" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

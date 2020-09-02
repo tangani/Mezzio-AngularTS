@@ -75,6 +75,7 @@
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/ramsey/collection" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/ramsey/uuid-doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/rbdwllr/reallysimplejwt" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/roave/psr-container-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/cli-parser" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/sebastian/code-unit" />

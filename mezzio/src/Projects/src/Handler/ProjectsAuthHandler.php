@@ -14,6 +14,7 @@ use Projects\Entity\Login;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use ReallySimpleJWT\Token;
 
 class ProjectsAuthHandler implements RequestHandlerInterface
 {
@@ -52,18 +53,46 @@ class ProjectsAuthHandler implements RequestHandlerInterface
         // return new JsonResponse($records[0]);
 
         $username = $request->getAttribute('username', null);
-        $password = $request->getAttribute('surname', null);
+        $password = $request->getAttribute('password', null);
 
-        if (in_array($username, $records[0])) {
-            if (in_array($password, $records[0])) {
-                return new JsonResponse("Middleware that handles token generation to take place here");
-            } else {
-                return new JsonResponse($records[0]);
+        $start = 0;
+        foreach ($records as $username => $password)
+        {
+            $start += 1;
+            if ($records["username"] = $username)
+            {
+                $passCheck = password_verify('e583799b852467HWeirdWords7f0cb11ca3c3', $records[$start]["password"]);
+                if ($passCheck)
+                {
+                    $userId = 12;
+                    $secret = 'sec!ReT423*&';
+                    $expiration = time() + 3600;
+                    $issuer = 'localhost';
+
+                    $token = Token::create($userId, $secret, $expiration, $issuer);
+
+                    return new JsonResponse($token);
+                } else {
+                    return new JsonResponse($records[$start]["password"]);
+                }
             }
-        } else {
-            return new JsonResponse($records);
-            // return new JsonResponse("Sorry username not found");
+
         }
+        return new JsonResponse("Sorry username not found");
+
+
+        /*
+          if (in_array($username, $records[0])) {
+                if (in_array($password, $records[1])) {
+                    return new JsonResponse("Middleware that handles token generation to take place here");
+                } else {
+                    return new JsonResponse($records[0]);
+                }
+            } else {
+                return new JsonResponse($records);
+                // return new JsonResponse("Sorry username not found");
+            }
+         */
 
 
         /*

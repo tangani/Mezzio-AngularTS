@@ -80,6 +80,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'R' => 
         array (
             'Roave\\PsrContainerDoctrine\\' => 27,
+            'ReallySimpleJWT\\' => 16,
             'Ramsey\\Uuid\\Doctrine\\' => 21,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
@@ -240,6 +241,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'Roave\\PsrContainerDoctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/roave/psr-container-doctrine/src',
+        ),
+        'ReallySimpleJWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src',
         ),
         'Ramsey\\Uuid\\Doctrine\\' => 
         array (
