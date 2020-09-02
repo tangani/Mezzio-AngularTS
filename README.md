@@ -15,4 +15,4 @@ Three folders for three different applications.
 
 The Application uses Laminas instead of Zend as they are both the same thing on different versions. For more information visit [Official documentation].
 
-[Me]: https://framework.zend.com/blog/2020-01-24-laminas-launch
+[Official documentation]: https://framework.zend.com/blog/2020-01-24-laminas-launch
