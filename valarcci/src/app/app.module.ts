@@ -26,12 +26,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { HomeComponent } from './home/home.component';
 import { ViewsComponentComponent } from './views-component/views-component.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ViewsComponentComponent
+    ViewsComponentComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,
