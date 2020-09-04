@@ -67,6 +67,7 @@ export class TestingComponent implements OnInit {
 
   addRow(d?: TableData, noUpdate?: boolean){
 
+    /*
     const row = this.fb.group({
       'title'   : [d && d.title   ? d.title   : null, []],
       'manager' : [d && d.manager ? d.manager : null, []],
@@ -78,12 +79,11 @@ export class TestingComponent implements OnInit {
 
     })
 
-    /*
-    for (this.object in this.projectData){
-    }
-     */
+
     this.rows.push(row);
     if (!noUpdate) { this.updateView();}
+
+     */
   }
 
   updateView(){
@@ -91,6 +91,7 @@ export class TestingComponent implements OnInit {
   }
 
   onSubmit(f) {
+    /*
     this.editList = [];
     this.comparingCount = 0;
     while (this.comparingCount < this.projectData.length) {
@@ -118,6 +119,6 @@ export class TestingComponent implements OnInit {
     }
     console.log(this.editList);
     console.log(f.value["projects"][this.editList[0]]);
+    */
   }
-
 }
