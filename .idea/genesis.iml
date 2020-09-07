@@ -111,6 +111,17 @@
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/webimpress/safe-writer" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/willdurand/negotiation" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-config" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-http" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-json" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-modulemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-mvc" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-router" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-uri" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zendframework/zend-view" />
+      <excludeFolder url="file://$MODULE_DIR$/mezzio/vendor/zfr/zfr-cors" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

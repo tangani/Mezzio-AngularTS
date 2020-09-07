@@ -54,7 +54,8 @@
         "ramsey/uuid-doctrine": "^1.6",
         "rbdwllr/reallysimplejwt": "^3.1",
         "roave/psr-container-doctrine": "^2.2",
-        "tuupola/cors-middleware": "^1.1"
+        "tuupola/cors-middleware": "^1.1",
+        "zfr/zfr-cors": "1.*"
     },
     "require-dev": {
         "laminas/laminas-development-mode": "^3.2",

@@ -53,6 +53,19 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Z' => 
+        array (
+            'Zend\\View\\' => 10,
+            'Zend\\Validator\\' => 15,
+            'Zend\\Uri\\' => 9,
+            'Zend\\Router\\' => 12,
+            'Zend\\Mvc\\' => 9,
+            'Zend\\ModuleManager\\' => 19,
+            'Zend\\Loader\\' => 12,
+            'Zend\\Json\\' => 10,
+            'Zend\\Http\\' => 10,
+            'Zend\\Config\\' => 12,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -176,6 +189,46 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Zend\\View\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-view/src',
+        ),
+        'Zend\\Validator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-validator/src',
+        ),
+        'Zend\\Uri\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-uri/src',
+        ),
+        'Zend\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-router/src',
+        ),
+        'Zend\\Mvc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-mvc/src',
+        ),
+        'Zend\\ModuleManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-modulemanager/src',
+        ),
+        'Zend\\Loader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-loader/src',
+        ),
+        'Zend\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-json/src',
+        ),
+        'Zend\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-http/src',
+        ),
+        'Zend\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-config/src',
         ),
         'Whoops\\' => 
         array (
@@ -475,6 +528,16 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'AppTest\\' => 
         array (
             0 => __DIR__ . '/../..' . '/test/AppTest',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'Z' => 
+        array (
+            'ZfrCors\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/zfr/zfr-cors/src',
+            ),
         ),
     );
 
@@ -1328,6 +1391,7 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit309979603896883fed8e5e8c33406d16::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit309979603896883fed8e5e8c33406d16::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit309979603896883fed8e5e8c33406d16::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit309979603896883fed8e5e8c33406d16::$classMap;
 
         }, null, ClassLoader::class);

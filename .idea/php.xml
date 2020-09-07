@@ -110,6 +110,17 @@
       <path value="$PROJECT_DIR$/mezzio/vendor/ramsey/uuid-doctrine" />
       <path value="$PROJECT_DIR$/mezzio/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/mezzio/vendor/rbdwllr/reallysimplejwt" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-uri" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-http" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-validator" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-router" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-modulemanager" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-mvc" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-config" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-json" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-loader" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zendframework/zend-view" />
+      <path value="$PROJECT_DIR$/mezzio/vendor/zfr/zfr-cors" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

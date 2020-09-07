@@ -7,6 +7,16 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
+    'Zend\\View\\' => array($vendorDir . '/zendframework/zend-view/src'),
+    'Zend\\Validator\\' => array($vendorDir . '/zendframework/zend-validator/src'),
+    'Zend\\Uri\\' => array($vendorDir . '/zendframework/zend-uri/src'),
+    'Zend\\Router\\' => array($vendorDir . '/zendframework/zend-router/src'),
+    'Zend\\Mvc\\' => array($vendorDir . '/zendframework/zend-mvc/src'),
+    'Zend\\ModuleManager\\' => array($vendorDir . '/zendframework/zend-modulemanager/src'),
+    'Zend\\Loader\\' => array($vendorDir . '/zendframework/zend-loader/src'),
+    'Zend\\Json\\' => array($vendorDir . '/zendframework/zend-json/src'),
+    'Zend\\Http\\' => array($vendorDir . '/zendframework/zend-http/src'),
+    'Zend\\Config\\' => array($vendorDir . '/zendframework/zend-config/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Webimpress\\SafeWriter\\' => array($vendorDir . '/webimpress/safe-writer/src'),
