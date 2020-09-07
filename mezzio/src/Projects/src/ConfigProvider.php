@@ -58,6 +58,7 @@ class ConfigProvider
                 Handler\ProjectsLoginHandler::class => Handler\ProjectsLoginHandlerFactory::class,
                 Handler\ProjectsReadHandler::class => Handler\ProjectsReadHandlerFactory::class,
                 Handler\ProjectsListHandler::class => Handler\ProjectsListHandlerFactory::class,
+                Handler\ProjectsUpdateHandler::class => Handler\ProjectsUpdateHandlerFactory::class,
             ],
         ];
     }

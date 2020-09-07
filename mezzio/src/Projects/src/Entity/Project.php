@@ -48,6 +48,29 @@ class Project
      */
     protected $end;
 
+    public function getProject(array $requestBody): array
+    {
+        return [
+            'id'        => $this->getId(),
+            'manager'   => $this->getManager(),
+            'status'    => $this->getStatus(),
+            'start'     => $this->getStart()->format('Y-m-d H:i:s'),
+            'end'       => $this->getEnd()->format('Y-m-d H:i:s')
+            ];
+    }
+
+    /**
+     * @param array $requestBody
+     */
+    public function setProject(array $requestBody): void
+    {
+        $this->setTitle($requestBody['title']);
+        $this->setManager($requestBody['manager']);
+        $this->setStatus($requestBody['status']);
+        // $this->setStart($requestBody['start']);
+        // $this->setEnd($requestBody['end']);
+    }
+
     /**
      * @return int
      */
@@ -89,6 +112,22 @@ class Project
     }
 
     /**
+     * @return string
+     */
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus(string $status): void
+    {
+        $this->status = $status;
+    }
+
+    /**
      * @return DateTime
      */
     public function getStart(): \DateTime
@@ -97,7 +136,8 @@ class Project
     }
 
     /**
-     * @param DateTime $start
+     * @param DateTIME $start
+     * @Assert\NotNull
      * @throws Exception
      */
     public function setStart(\DateTime $start = null): void
