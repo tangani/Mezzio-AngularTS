@@ -2,7 +2,7 @@
 
 
 : <<'COMMENT'
-	This script is meant to shorten the path on the user terminal while beautifying it by addiict custom colors.
+	This script is meant to shorten the path on the user terminal while beautifying it by addict custom colors.
 	There is a comment command at the bottom of the script which will reload the default configuration of the terminal.
 
 	How it works:
@@ -30,15 +30,15 @@ COMMENT
 
 function usage() {
 	
-	echo -e "\e[34mPlease ensure the shebang corresponds with your shell enviroment\e[0m"
+	echo -e "\e[34mPlease ensure the shebang corresponds with your shell environment\e[0m"
 	echo -e "run the script with a \033[01;31m.\e[0m to execute in the same shell"
-	echo -e "\e[32m			. shortern_path_terminal.sh \e[0m"
+	echo -e "\e[32m			. shorten_terminal_path.sh \e[0m"
 }
 
 function color_select() {
 	# echo $start
 	printf " \n\n"
-	echo "PLEASE CHOOSE THE COLOR TO USE TO HIGHLIGHT THE "$position
+	echo 'PLEASE CHOOSE THE COLOR TO USE TO HIGHLIGHT THE '"$position"
 	printf " \n\n"
 	PS3='Please enter your choice: '
 	options=( "black" "red" "green" "yellow" "blue" "magenta" "cyan" "light gray" "dark gray" "light red" "light green" "light yellow" "light blue" "light magenta" "light cyan" "white" "Quit")
@@ -135,7 +135,7 @@ function color_select() {
 }
 
 echo ""
-echo -e "\033[01;92mAfternoon Human Being form the solar system, I will be your personal assistant for this session!\n\n\n\e[0m"
+echo -e "\033[01;92mHello Human Being form the solar system, I will be your personal assistant for this session!\n\n\n\e[0m"
 
 
 usage
@@ -172,3 +172,5 @@ PS1=${hold}
 
 
 echo -e "\e[97mChanged"
+printf " \n\n "
+echo -e "\033[01;92mGoodbye Human Being form the solar system. it has been a great experience working with you.\e[0m"
