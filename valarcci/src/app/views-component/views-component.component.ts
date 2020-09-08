@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger } from "@angular/animations";
 import { MatDialog } from "@angular/material/dialog";
-import {FormBuilder, FormGroup, FormArray, NgForm, Validators, FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, NgForm, Validators, FormControl} from '@angular/forms';
 
-import { ViewServiceService } from "../view-service.service";
+import { ViewService } from "../view.service";
 import { Entities } from "../shared/entities";
 import { Feedback } from "../shared/feedback";
 
@@ -46,16 +46,17 @@ export class ViewsComponentComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private viewService: ViewServiceService,
+    private viewService: ViewService,
     public dialog: MatDialog
   ) {  }
 
 
   ngOnInit(): void {
     this.viewService.getProjects().subscribe((projects) => {
-      this.dataSource = projects;
+      // if (projects) {
+        this.dataSource = projects;
+      // }
     })
-
   }
 
 

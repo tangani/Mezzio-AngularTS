@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ViewService {
+export class ViewServiceservice {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  public getProjects() {
-    return this.http.get(`http://localhost:8080/projects/?page=1`);
-  }
+
 }

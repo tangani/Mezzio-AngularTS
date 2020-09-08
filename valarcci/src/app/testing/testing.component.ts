@@ -6,16 +6,11 @@ import { BehaviorSubject } from 'rxjs';
 import { TableData } from "../shared/table-data.model";
 import { Project } from "../shared/project";
 import { PROJECTS} from "../shared/projects";
+import { ViewService } from "../view.service";
 
 interface Level {
   value: string;
   viewValue: string;
-}
-
-interface Dates {
-  date: string;
-  timezone_type: number;
-  timezone: string;
 }
 
 @Component({
@@ -47,9 +42,16 @@ export class TestingComponent implements OnInit {
   form: FormGroup = this.fb.group({'projects': this.rows});
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private viewService: ViewService
+  ) { }
 
   ngOnInit(): void {
+
+    // console.log(typeof this.projectData);
+    // console.log(this.projectData);
+
     while (this.objectLength < this.projectData.length){
       // @ts-ignore
       this.project.forEach((d: TableData) => this.addRow(this.projectData[this.objectLength], false));
@@ -67,7 +69,6 @@ export class TestingComponent implements OnInit {
 
   addRow(d?: TableData, noUpdate?: boolean){
 
-    /*
     const row = this.fb.group({
       'title'   : [d && d.title   ? d.title   : null, []],
       'manager' : [d && d.manager ? d.manager : null, []],
@@ -83,7 +84,6 @@ export class TestingComponent implements OnInit {
     this.rows.push(row);
     if (!noUpdate) { this.updateView();}
 
-     */
   }
 
   updateView(){
@@ -91,7 +91,7 @@ export class TestingComponent implements OnInit {
   }
 
   onSubmit(f) {
-    /*
+
     this.editList = [];
     this.comparingCount = 0;
     while (this.comparingCount < this.projectData.length) {
@@ -119,6 +119,5 @@ export class TestingComponent implements OnInit {
     }
     console.log(this.editList);
     console.log(f.value["projects"][this.editList[0]]);
-    */
   }
 }
