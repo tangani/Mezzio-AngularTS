@@ -15,6 +15,7 @@ use Projects\Entity\Login;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use ReallySimpleJWT\Token;
 
 class ProjectsSignupHandler implements RequestHandlerInterface
 {
@@ -47,7 +48,6 @@ class ProjectsSignupHandler implements RequestHandlerInterface
 
         $entity = new Login();
 
-        /*
         $repository = $this->entityManager->getRepository(Login::class);
 
         $query = $repository
@@ -60,19 +60,21 @@ class ProjectsSignupHandler implements RequestHandlerInterface
             ->getQuery()
             ->getResult(Query::HYDRATE_ARRAY);
 
-        $recent = end($records);
-        $newId = $recent['id'];
-        $idArray = explode("-", (string)$newId);
-        $firstUuid = $idArray[0];
-        $endUuid = end($idArray);
+        $start = 0;
+        foreach ($records as $key => $value)
+        {
+            if ($records[$key]["username"] == $requestBody['username'])
+            {
+                $takenUsername = $requestBody['username'].": username already taken";
+                return new JsonResponse($takenUsername);
+            }
+        }
+
+        // return new JsonResponse($requestBody);
+        // return new JsonResponse($records);
 
 
-
-        return new JsonResponse($endUuid);
-
-        */
-
-
+        // Set user function used to add new user
         try {
             $entity->setUser($requestBody);
             $this->entityManager->persist($entity);
@@ -84,8 +86,29 @@ class ProjectsSignupHandler implements RequestHandlerInterface
             return new JsonResponse($result);
         }
 
+
         // $resource = $this->resourceGenerator->fromObject($entity, $request);
-        return new JsonResponse($requestBody["username"]);
+
+        $records = $paginator
+            ->getQuery()
+            ->getResult(Query::HYDRATE_ARRAY);
+
+        foreach ($records as $key => $value)
+        {
+            if ($records[$key]["username"] == $requestBody['username'])
+            {
+                // $takenUsername = $requestBody['username'].": username already taken";
+                $userId = $records[$key]["username"];
+                $secret = 'sec!ReT423*&';
+                $expiration = time() + 3600;
+                $issuer = 'localhost';
+                $token = Token::create($userId, $secret, $expiration, $issuer);
+
+                return new JsonResponse($token);
+            }
+        }
+
+        // return new JsonResponse($requestBody["username"]);
         // Create and return a response
     }
 }
