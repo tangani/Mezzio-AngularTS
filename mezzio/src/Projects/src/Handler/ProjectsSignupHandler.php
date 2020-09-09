@@ -34,10 +34,19 @@ class ProjectsSignupHandler implements RequestHandlerInterface
         $this->resourceGenerator  = $resourceGenerator;
     }
 
+    private function checkIfUserExists($requestBody): ResponseInterface
+    {
+            return  new JsonResponse($requestBody);
+    }
+
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
+
+
         $result = [];
         $requestBody = $request->getParsedBody()['Request']['SignUp'];
+
+        return $this->checkIfUserExists($requestBody);
 
         if (empty($requestBody)) {
             $result['_error']['error'] = 'missing_request';
@@ -45,6 +54,8 @@ class ProjectsSignupHandler implements RequestHandlerInterface
 
             return new JsonResponse($result);
         }
+
+        // return new JsonResponse($requestBody);
 
         $entity = new Login();
 
@@ -60,7 +71,6 @@ class ProjectsSignupHandler implements RequestHandlerInterface
             ->getQuery()
             ->getResult(Query::HYDRATE_ARRAY);
 
-        $start = 0;
         foreach ($records as $key => $value)
         {
             if ($records[$key]["username"] == $requestBody['username'])
@@ -70,24 +80,46 @@ class ProjectsSignupHandler implements RequestHandlerInterface
             }
         }
 
-        // return new JsonResponse($requestBody);
-        // return new JsonResponse($records);
+        /*
+        return new JsonResponse(gettype($requestBody));
+
+        // return new JsonResponse($requestBody["username"]);
+        $userId = $records[0]["username"];
+        $secret = 'sec!ReT423*&';
+        $expiration = time() + 3600;
+        $issuer = 'localhost';
+        $token = Token::create($userId, $secret, $expiration, $issuer);
+
+        return new JsonResponse($token);
+        */
 
 
         // Set user function used to add new user
         try {
+            // return new JsonResponse($requestBody["username"]);
             $entity->setUser($requestBody);
             $this->entityManager->persist($entity);
             $this->entityManager->flush();
+            // return new JsonResponse("Just flushed");
         } catch (ORMException $e) {
             $result['_error']['error'] = 'not_created';
             $result['_error']['error_description'] = $e->getLine();
 
-            return new JsonResponse($result);
+            return new JsonResponse("In the catch");
+            // return new JsonResponse($result);
         }
+
+        // return new JsonResponse("Done...");
 
 
         // $resource = $this->resourceGenerator->fromObject($entity, $request);
+
+
+        $query = $repository
+            ->createQueryBuilder('p')
+            ->getQuery();
+
+        $paginator = new Paginator($query);
 
         $records = $paginator
             ->getQuery()
@@ -107,8 +139,5 @@ class ProjectsSignupHandler implements RequestHandlerInterface
                 return new JsonResponse($token);
             }
         }
-
-        // return new JsonResponse($requestBody["username"]);
-        // Create and return a response
     }
 }
