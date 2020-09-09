@@ -9,6 +9,7 @@ return [
         "origin" => ["*"],
         "methods" => ["GET", "POST", "PUT", "PATCH", "DELETE"],
         "headers.allow" => ["Content-Type", "Accept"],
+        // "headers.allow" => ["Content-Type: application/json"],
         "headers.expose" => [],
         "credentials" => false,
         "cache" => 0,

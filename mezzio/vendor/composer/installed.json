@@ -6539,17 +6539,17 @@
     },
     {
         "name": "symfony/service-contracts",
-        "version": "v2.1.3",
-        "version_normalized": "2.1.3.0",
+        "version": "v2.2.0",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/service-contracts.git",
-            "reference": "58c7475e5457c5492c26cc740cc0ad7464be9442"
+            "reference": "d15da7ba4957ffb8f1747218be9e1a121fd298a1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/58c7475e5457c5492c26cc740cc0ad7464be9442",
-            "reference": "58c7475e5457c5492c26cc740cc0ad7464be9442",
+            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d15da7ba4957ffb8f1747218be9e1a121fd298a1",
+            "reference": "d15da7ba4957ffb8f1747218be9e1a121fd298a1",
             "shasum": ""
         },
         "require": {
@@ -6559,11 +6559,11 @@
         "suggest": {
             "symfony/service-implementation": ""
         },
-        "time": "2020-07-06T13:23:11+00:00",
+        "time": "2020-09-07T11:33:47+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.1-dev"
+                "dev-master": "2.2-dev"
             },
             "thanks": {
                 "name": "symfony/contracts",
@@ -6818,32 +6818,31 @@
     },
     {
         "name": "tuupola/callable-handler",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tuupola/callable-handler.git",
-            "reference": "8b9d87f88056d4234af317d65612d7b6307a747a"
+            "reference": "0bc7b88630ca753de9aba8f411046856f5ca6f8c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tuupola/callable-handler/zipball/8b9d87f88056d4234af317d65612d7b6307a747a",
-            "reference": "8b9d87f88056d4234af317d65612d7b6307a747a",
+            "url": "https://api.github.com/repos/tuupola/callable-handler/zipball/0bc7b88630ca753de9aba8f411046856f5ca6f8c",
+            "reference": "0bc7b88630ca753de9aba8f411046856f5ca6f8c",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1",
+            "php": "^7.1|^8.0",
             "psr/http-server-middleware": "^1.0"
         },
         "require-dev": {
-            "codedungeon/phpunit-result-printer": "^0.4.4",
             "overtrue/phplint": "^1.0",
-            "phpunit/phpunit": "^6.5",
+            "phpunit/phpunit": "^7.0|^8.0|^9.0",
             "squizlabs/php_codesniffer": "^3.2",
             "tuupola/http-factory": "^0.4.0|^1.0",
             "zendframework/zend-diactoros": "^1.6.0|^2.0"
         },
-        "time": "2018-10-12T09:59:35+00:00",
+        "time": "2020-09-09T08:31:54+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -6869,41 +6868,46 @@
             "middleware",
             "psr-15",
             "psr-7"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/tuupola",
+                "type": "github"
+            }
         ]
     },
     {
         "name": "tuupola/cors-middleware",
-        "version": "1.1.1",
-        "version_normalized": "1.1.1.0",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tuupola/cors-middleware.git",
-            "reference": "a043f4f52b902ee8902f95d28aae05013a7180fc"
+            "reference": "9412ed898772e993d8620369a3c4d79b05c5807e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tuupola/cors-middleware/zipball/a043f4f52b902ee8902f95d28aae05013a7180fc",
-            "reference": "a043f4f52b902ee8902f95d28aae05013a7180fc",
+            "url": "https://api.github.com/repos/tuupola/cors-middleware/zipball/9412ed898772e993d8620369a3c4d79b05c5807e",
+            "reference": "9412ed898772e993d8620369a3c4d79b05c5807e",
             "shasum": ""
         },
         "require": {
             "neomerx/cors-psr7": "^1.0.4",
-            "php": "^7.1",
+            "php": "^7.1|^8.0",
             "psr/http-message": "^1.0.1",
             "psr/http-server-middleware": "^1.0",
             "tuupola/callable-handler": "^1.0",
             "tuupola/http-factory": "^1.0"
         },
         "require-dev": {
-            "codedungeon/phpunit-result-printer": "^0.23.2",
             "equip/dispatch": "^2.0",
             "overtrue/phplint": "^1.0",
-            "phpstan/phpstan": "^0.11.15",
-            "phpunit/phpunit": "^7.4",
-            "squizlabs/php_codesniffer": "^3.3.1",
+            "phpstan/phpstan": "^0.12.42",
+            "phpunit/phpunit": "^7.0|^8.0|^9.0",
+            "squizlabs/php_codesniffer": "^3.5",
             "zendframework/zend-diactoros": "^1.0|^2.0"
         },
-        "time": "2019-10-30T11:18:16+00:00",
+        "time": "2020-09-09T10:39:29+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -6930,25 +6934,31 @@
             "middleware",
             "psr-15",
             "psr-7"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/tuupola",
+                "type": "github"
+            }
         ]
     },
     {
         "name": "tuupola/http-factory",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tuupola/http-factory.git",
-            "reference": "5fbde4c65a10d09a85652684a6e569542265a749"
+            "reference": "ce41d5a8d7b0d694544e118959c58c1f353781cd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tuupola/http-factory/zipball/5fbde4c65a10d09a85652684a6e569542265a749",
-            "reference": "5fbde4c65a10d09a85652684a6e569542265a749",
+            "url": "https://api.github.com/repos/tuupola/http-factory/zipball/ce41d5a8d7b0d694544e118959c58c1f353781cd",
+            "reference": "ce41d5a8d7b0d694544e118959c58c1f353781cd",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1",
+            "php": "^7.1|^8.0",
             "psr/http-factory": "^1.0"
         },
         "conflict": {
@@ -6958,12 +6968,12 @@
             "psr/http-factory-implementation": "^1.0"
         },
         "require-dev": {
-            "http-interop/http-factory-tests": "^0.5.0",
+            "http-interop/http-factory-tests": "^0.7.0",
             "overtrue/phplint": "^1.0",
-            "phpunit/phpunit": "^6.0|^7.0",
+            "phpunit/phpunit": "^7.0|^8.0|^9.0",
             "squizlabs/php_codesniffer": "^3.0"
         },
-        "time": "2019-08-07T07:10:58+00:00",
+        "time": "2020-09-08T10:51:31+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -6989,6 +6999,12 @@
             "http",
             "psr-17",
             "psr-7"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/tuupola",
+                "type": "github"
+            }
         ]
     },
     {
