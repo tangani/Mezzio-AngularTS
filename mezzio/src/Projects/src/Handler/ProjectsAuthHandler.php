@@ -53,15 +53,16 @@ class ProjectsAuthHandler implements RequestHandlerInterface
         // return new JsonResponse($records[0]);
 
         $username = $request->getAttribute('username', null);
-        $password = $request->getAttribute('password', null);
+        $rawPassword = $request->getAttribute('password', null);
 
         $start = 0;
-        foreach ($records as $username => $password)
+        foreach ($records as $key => $value)
         {
             $start += 1;
-            if ($records["username"] = $username)
+            if ($records[$key]["username"] == $username)
             {
-                $passCheck = password_verify('e583799b852467HWeirdWords7f0cb11ca3c3', $records[$start]["password"]);
+                $passCheck = password_verify($rawPassword, $records[$key]["password"]);
+
                 if ($passCheck)
                 {
                     $userId = $username;
@@ -74,47 +75,12 @@ class ProjectsAuthHandler implements RequestHandlerInterface
                     return new JsonResponse($token);
                     // return new JsonResponse($records[$start]);
                 } else {
-                    return new JsonResponse($records[$start]["password"]);
+                    return new JsonResponse("Wrong password or username");
                 }
             }
 
         }
-        return new JsonResponse("Sorry username not found");
-
-
-        /*
-          if (in_array($username, $records[0])) {
-                if (in_array($password, $records[1])) {
-                    return new JsonResponse("Middleware that handles token generation to take place here");
-                } else {
-                    return new JsonResponse($records[0]);
-                }
-            } else {
-                return new JsonResponse($records);
-                // return new JsonResponse("Sorry username not found");
-            }
-         */
-
-
-        /*
-        $username = $request->getAttribute('id', null);
-        $entityRepository = $this->entityManager->getRepository(Login::class);
-        $entity = $entityRepository->find($username);
-
-        if (empty($entity)) {
-            $result['_error']['error'] = 'not_found';
-            $result['_error']['error_description'] = 'Record not found';
-
-            return new JsonResponse($result, 404);
-        }
-
-        $resource = $this->resourceGenerator->fromObject($entity, $request);
-        // return  $this->halResponseFactory->createResponse($request, $resource);
-
-
-
-        */
-
-
+        // return new JsonResponse($records[$key]);
+        return new JsonResponse("Wrong password or username");
     }
 }
