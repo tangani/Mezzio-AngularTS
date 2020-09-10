@@ -13,6 +13,8 @@ Three folders for three different applications.
         
 3. Valarcci application will be loaded as soon as possible as it will be for a separate standalone SPA which will also require its own middleware.
 
+4. online-shop is a frontend application using dummy data to imitate online shopping.
+
 The Application uses Laminas instead of Zend as they are both the same thing on different versions. For more information visit [Official documentation].
 
 [Official documentation]: https://framework.zend.com/blog/2020-01-24-laminas-launch
