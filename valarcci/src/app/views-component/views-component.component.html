@@ -1,6 +1,5 @@
 <table mat-table class="table-width"
-       [dataSource]="dataSource"
->
+       [dataSource]="dataSource">
   <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
   <th mat-header-cell *matHeaderCellDef> {{column}}</th>
     <td mat-cell class="mat-column" *matCellDef="let entryProject">{{entryProject[column]["date"] == undefined ? entryProject[column] : entryProject[column]["date"].substring(0,10)}}</td>
