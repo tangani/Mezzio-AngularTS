@@ -1,12 +1,84 @@
+<!--
 <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
   <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
     <mat-card>
       <img  class="picture" mat-card-sm-image src={{dataSource.image}}>
-      <mat-card-content>
-        <p>{{dataSource.title}}</p>
-        <hr>
-        <p>R{{dataSource.price}}</p>
-      </mat-card-content>
+
     </mat-card>
   </div>
+</div>
+
+-->
+
+<!--
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card>
+    <mat-card-content>
+      <div fxLayout="row">
+        <div fxFlex="25%">
+          <img src="{{ dataSource.image }}" />
+        </div>
+        <div fxFlex="75%">
+          <h1>{{ dataSource.title }}</h1>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              Favorite Foods!
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              Bad ingredients!
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+-->
+
+<div fxLayout="row">
+  <mat-card fxLayout="row" fxFlex="60%" class="center space-top">
+    <mat-card-content fxLayout.gt-sm="row">
+      <div fxLayout.gt-sm="column" fxFlex.gt-sm="40%">
+        <img mat-card-image src="{{ dataSource.image }}" alt="background image">
+      </div>
+      <div fxLayout.gt-sm="column" fxFlex.gt-sm="2%"></div>
+      <div fxLayout.gt-sm="column" fxFlex.gt-sm="36%" class="gutter">
+          <h1>{{ dataSource.title }}</h1>
+          <mat-card-content>
+              {{ dataSource.description }}
+          </mat-card-content>
+        <mat-card-content>
+          <a href="#"> {{ dataSource.category }} </a>
+        </mat-card-content>
+        <mat-card-content>
+          <ul>
+            <li>Free Delivery Available.</li>
+            <li>Hassle-Free Exchanges & Returns for 30 Days.</li>
+            <li>24-Month Manufacturer Warranty.</li>
+          </ul>
+        </mat-card-content>
+      </div>
+      <div fxLayout.gt-sm="column" fxFlex.gt-sm="2%"></div>
+      <div fxLayout.gt-sm="column" fxFlex.gt-sm="20%" class="gutter">
+        <mat-card-header>
+          <h1 class="price"><b>R{{ dataSource.price }}</b></h1>
+        </mat-card-header>
+        <mat-card-content>
+          Free Delivery
+        </mat-card-content>
+        <mat-card-content>
+          <button mat-raised-button color="primary">
+            <mat-icon >shopping_cart</mat-icon>
+          </button>
+        </mat-card-content>
+        <mat-card-content>
+          <button mat-raised-button color="basic">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </mat-card-content>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>
