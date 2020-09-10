@@ -16,6 +16,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatSortModule } from "@angular/material/sort";
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -68,7 +71,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     MatSortModule,
     MatTableModule,
     MatToolbarModule,
-    FlexModule
+    FlexModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],
