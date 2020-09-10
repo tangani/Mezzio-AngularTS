@@ -1,4 +1,61 @@
 <p>home works!</p>
 
-
 {{productCapture[0]["image"]}}
+<br>
+
+<!--
+<div class="content">
+  <mat-card class="mat-elevation-z4">
+    <mat-card-header>
+      <mat-card-title>Himalayan Peaks</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/images/molisa.jpg" />
+    <mat-card-content>
+      <p>The Himalayas is a mountain range in Asia.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+-->
+
+<!--
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <mat-card-title>Mountains {{num}}</mat-card-title>
+      </mat-card-header>
+      <img class="picture" mat-card-image src="../../assets/images/molisa.jpg">
+      <mat-card-content>
+        <p>
+          The Himalayas is a mountain range in Asia.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+-->
+
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"
+    *ngFor="let product of dataSource; let i = index;">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>{{product.title}}</mat-card-title>
+      </mat-card-header>
+      <img class="picture" mat-card-image src={{product.image}}>
+      <mat-card-content>
+        <p>
+          R{{product.price*10}}.99
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
