@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  SignUp
+  <span class ="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+<form novalidate [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Name" type="text"
+               [formControlName]="'name'" name="name"  required>
+        <mat-error *ngIf="registerForm.get('name').hasError('required')">Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Surname" type="text"
+               [formControlName]="('surname')" name="surname" required>
+        <mat-error *ngIf="registerForm.get('surname').hasError('required')">Surname is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Username" type="text"
+               [formControlName]="('username')" name="username"  required>
+        <mat-error *ngIf="registerForm.get('username').hasError('required')">Username is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password"
+               [formControlName]="('password')" name="password" required>
+        <mat-error *ngIf="registerForm.get('password').hasError('required')">Password is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Phone number" type="number"
+               [formControlName]="('telephoneNumber')" name="telephoneNumber" required>
+        <mat-error *ngIf="registerForm.get('telephoneNumber').hasError('required')">Telephone number is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" type="email"
+               [formControlName]="('email')" name="email" required>
+        <mat-error *ngIf="registerForm.get('email').hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="registerForm.get('email').hasError('email')">Please enter a valid email.</mat-error>
+      </mat-form-field>
+
+      <mat-checkbox [formControlName]="('contactMe')" name="contactMe">Contact Me</mat-checkbox>
+
+    </p>
+  </mat-dialog-content>
+
+  <p *ngIf="badResponse">Sorry, username already taken</p>
+
+  <mat-dialog-actions>
+    <button mat-button type="submit" class="background-primary text-floral-white">Login</button>
+    <button mat-button [disabled]="!registerForm.valid" type="submit" class="background-primary text-floral-white">Register</button>
+    <span class="flex-spacer"></span>
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</form>
