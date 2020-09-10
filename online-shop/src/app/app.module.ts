@@ -31,6 +31,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
 import {FlexModule} from "@angular/flex-layout";
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {FlexModule} from "@angular/flex-layout";
     RegisterComponent,
     OrdersComponent,
     AccountComponent,
-    CartComponent
+    CartComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
