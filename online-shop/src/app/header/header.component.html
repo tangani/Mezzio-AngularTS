@@ -1,11 +1,45 @@
 <mat-toolbar color="primary">
   <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Valarcii</a>
-  <a mat-button routerLink='#'  routerLinkActive="active"><span class="fa fa-info fa-lg"></span> About</a>
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> Menu</a>
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>
   <span class="flex-spacer"></span>
-  <a mat-button (click)="openRegisterForm()"><span class="fa fa-sign-in fa-lg"></span>Join Us</a>
   <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span>Sign In</a>
+  <a mat-button (click)="openRegisterForm()"><span class="fa fa-sign-in fa-lg"></span>Join Us</a>
+  <a mat-button routerLink='#'  routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Orders</a>
+  <a>
+    <span class="fa fa-list fa-lg">
+      <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+        Account
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <span (mouseleave)="menuTrigger.closeMenu()">
+        <button mat-menu-item>
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>people_outline</mat-icon>
+          <span>Connecting</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>videocam</mat-icon>
+          <span>Let's talk</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </span>
+      </mat-menu>
+    </span>
+  </a>
+
+  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button></a>
+
+  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button></a>
+
 </mat-toolbar>
 <mat-toolbar>
 
