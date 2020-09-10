@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
       if (this.productCapture) { this.dataSource = this.productCapture}
     })
   }
-
+// Changes in my life
 
   select(title) {
     console.log(title);
