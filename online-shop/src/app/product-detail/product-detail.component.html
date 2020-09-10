@@ -1,1 +1,12 @@
-<p>product-detail works!</p>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+    <mat-card>
+      <img  class="picture" mat-card-sm-image src={{dataSource.image}}>
+      <mat-card-content>
+        <p>{{dataSource.title}}</p>
+        <hr>
+        <p>R{{dataSource.price}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

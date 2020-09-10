@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProductsService } from "../services/products.service";
-import {FormBuilder} from "@angular/forms";
+import { FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -13,17 +14,12 @@ export class HomeComponent implements OnInit {
   productCapture;
   dataSource;
 
-  defaultElevation = 2;
-  raisedElevation = 8;
-
-  titles:title[] = [{name:'title1'}, {name:'title2'},{name:'title3'}];
-  titleSelected;
-
   name = 'Angular';
 
   constructor(
     private productsService: ProductsService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -36,6 +32,7 @@ export class HomeComponent implements OnInit {
 
   select(title) {
     console.log(title);
+    this.router.navigate(['product', title]);
     // this.titles.map(t=>t.isSelected = false);
     // title.isSelected = true;
     // this.titleSelected = title;
