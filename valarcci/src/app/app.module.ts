@@ -28,6 +28,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewsComponentComponent } from './views-component/views-component.component';
 import { TestingComponent } from './testing/testing.component';
 import { CombinationComponent } from './combination/combination.component';
+import { DynamicTableComponent } from './dynamic-table/dynamic-table.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CombinationComponent } from './combination/combination.component';
     HomeComponent,
     ViewsComponentComponent,
     TestingComponent,
-    CombinationComponent
+    CombinationComponent,
+    DynamicTableComponent
   ],
   imports: [
     BrowserModule,
