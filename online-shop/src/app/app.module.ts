@@ -30,6 +30,7 @@ import { RegisterComponent } from './register/register.component';
 import { OrdersComponent } from './orders/orders.component';
 import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
+import {FlexModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CartComponent } from './cart/cart.component';
     MatProgressSpinnerModule,
     MatSortModule,
     MatTableModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexModule
   ],
   providers: [],
   bootstrap: [AppComponent],
