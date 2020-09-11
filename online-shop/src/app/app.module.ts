@@ -19,6 +19,8 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { OverlayModule } from "@angular/cdk/overlay";
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -35,6 +37,7 @@ import { AccountComponent } from './account/account.component';
 import { CartComponent } from './cart/cart.component';
 import {FlexModule} from "@angular/flex-layout";
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     OrdersComponent,
     AccountComponent,
     CartComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    WishListComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     FlexModule,
     MatExpansionModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatAutocompleteModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent],
