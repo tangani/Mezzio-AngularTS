@@ -111,6 +111,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
             'PhpParser\\' => 10,
             'PackageVersions\\' => 16,
         ),
+        'O' => 
+        array (
+            'OnlineStore\\' => 12,
+        ),
         'N' => 
         array (
             'Neomerx\\Cors\\' => 13,
@@ -352,6 +356,10 @@ class ComposerStaticInit309979603896883fed8e5e8c33406d16
         'PackageVersions\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/package-versions-deprecated/src/PackageVersions',
+        ),
+        'OnlineStore\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/OnlineStore/src',
         ),
         'Neomerx\\Cors\\' => 
         array (

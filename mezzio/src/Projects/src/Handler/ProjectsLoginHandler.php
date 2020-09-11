@@ -34,9 +34,9 @@ class ProjectsLoginHandler implements RequestHandlerInterface
         ResourceGenerator $resourceGenerator
     )
     {
-        $this->entityManager = $entityManager;
-        $this->halResponseFactory = $halResponseFactory;
-        $this->resourceGenerator = $resourceGenerator;
+        $this->entityManager       = $entityManager;
+        $this->halResponseFactory  = $halResponseFactory;
+        $this->resourceGenerator   = $resourceGenerator;
     }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface

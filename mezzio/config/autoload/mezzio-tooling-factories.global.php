@@ -13,7 +13,7 @@ declare(strict_types=1);
 return [
     'dependencies' => [
         'factories' => [
-            // Projects\Handler\ProjectsUpdateHandler::class => Projects\Handler\ProjectsUpdateHandlerFactory::class,
+            OnlineStore\Handler\StoreLoginHandler::class => OnlineStore\Handler\StoreLoginHandlerFactory::class,
         ],
     ],
 ];

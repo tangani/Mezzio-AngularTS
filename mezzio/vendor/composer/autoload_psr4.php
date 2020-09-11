@@ -47,6 +47,7 @@ return array(
     'Projects\\' => array($baseDir . '/src/Projects/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'PackageVersions\\' => array($vendorDir . '/composer/package-versions-deprecated/src/PackageVersions'),
+    'OnlineStore\\' => array($baseDir . '/src/OnlineStore/src'),
     'Neomerx\\Cors\\' => array($vendorDir . '/neomerx/cors-psr7/src'),
     'Negotiation\\' => array($vendorDir . '/willdurand/negotiation/src/Negotiation'),
     'Mezzio\\Tooling\\' => array($vendorDir . '/mezzio/mezzio-tooling/src'),

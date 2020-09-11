@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/mezzio/src/Elements/src" isTestSource="false" packagePrefix="Elements\" />
       <sourceFolder url="file://$MODULE_DIR$/mezzio/test/AppTest" isTestSource="true" packagePrefix="AppTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/mezzio/src/OnlineStore/src" isTestSource="false" packagePrefix="OnlineStore\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/mezzio/src/Projects/src" isTestSource="false" packagePrefix="Projects\" />
       <sourceFolder url="file://$MODULE_DIR$/mezzio/src/App/src" isTestSource="false" packagePrefix="App\" />
