@@ -80,15 +80,15 @@ class ConfigProvider
         return [
             'driver' => [
                 'orm_default' => [
-                    'class' => MappingDriverChain::class,
+                    'class'   => MappingDriverChain::class,
                     'drivers' => [
                         'Projects\Entity' => 'project_entity',
                     ],
                 ],
                 'project_entity' => [
-                    'class' => AnnotationDriver::class,
-                    'cache' => 'array',
-                    'paths' => [__DIR__ . '/Entity'],
+                    'class'      => AnnotationDriver::class,
+                    'cache'      => 'array',
+                    'paths'      => [__DIR__ . '/Entity'],
                 ],
             ],
         ];
@@ -99,22 +99,22 @@ class ConfigProvider
         return [
 
             [
-                '__class__' => RouteBasedCollectionMetadata::class,
-                'collection_class' => ProjectCollection::class,
+                '__class__'           => RouteBasedCollectionMetadata::class,
+                'collection_class'    => ProjectCollection::class,
                 'collection_relation' => 'project',
-                'route' => 'projects.list',
+                'route'               => 'projects.list',
             ],
             [
-                '__class__' => RouteBasedResourceMetadata::class,
+                '__class__'      => RouteBasedResourceMetadata::class,
                 'resource_class' => Project::class,
-                'route' => 'project.read',
-                'extractor' => ReflectionHydrator::class
+                'route'          => 'project.read',
+                'extractor'      => ReflectionHydrator::class
             ],
             [
-                '__class__' => RouteBasedResourceMetadata::class,
+                '__class__'      => RouteBasedResourceMetadata::class,
                 'resource_class' => Login::class,
-                'route' => 'login.read',
-                'extractor' => ReflectionHydrator::class
+                'route'          => 'login.read',
+                'extractor'      => ReflectionHydrator::class
             ],
         ];
     }

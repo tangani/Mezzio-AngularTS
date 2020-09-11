@@ -6,10 +6,14 @@ namespace OnlineStore;
 
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Doctrine\Persistence\Mapping\Driver\MappingDriverChain;
+use Laminas\Hydrator\ReflectionHydrator;
 use Mezzio\Hal\Metadata\MetadataMap;
 use Mezzio\Hal\Metadata\RouteBasedCollectionMetadata;
 use Mezzio\Hal\Metadata\RouteBasedResourceMetadata;
+use OnlineStore\Entity\Login;
+use OnlineStore\Entity\OnlineStore;
 use OnlineStore\Entity\OnlineStoreCollection;
+use OnlineStore\Handler;
 
 /**
  * The configuration provider for the OnlineStore module
@@ -40,9 +44,15 @@ class ConfigProvider
     public function getDependencies() : array
     {
         return [
+            'delegators' => [
+                \Mezzio\Application::class => [
+                    RoutesDelegator::class,
+                ],
+            ],
             'invokables' => [
             ],
             'factories'  => [
+                Handler\StoreLoginHandler::class => Handler\StoreLoginHandlerFactory::class,
             ],
         ];
     }
@@ -69,7 +79,7 @@ class ConfigProvider
                         'OnlineStore\Entity' => 'onlineStore_entity',
                     ],
                 ],
-                'onlineStore_entiry' => [
+                'onlineStore_entity' => [
                     'class' => AnnotationDriver::class,
                     'cache' => 'array',
                     'paths' => [__DIR__ . 'Entity'],
@@ -82,15 +92,23 @@ class ConfigProvider
     {
         return [
             [
-                '__class__' => RouteBasedCollectionMetadata::class,
-                'collection_class' => OnlineStoreCollection::class,
+                '__class__'           => RouteBasedCollectionMetadata::class,
+                'collection_class'    => OnlineStoreCollection::class,
                 'collection_relation' => 'onlineStore',
-                'route' => 'onlineStore.list',
+                'route'               => 'onlineStore.list',
             ],
             [
-                '__class__' => RouteBasedResourceMetadata::class,
-                'resource_class' => OnlineStore
-            ]
+                '__class__'      => RouteBasedResourceMetadata::class,
+                'resource_class' => OnlineStore::class,
+                'route'          => 'onlineStore.read',
+                'extractor'      => ReflectionHydrator::class
+            ],
+            [
+                '__class__'      => RouteBasedResourceMetadata::class,
+                'resource_class' => Login::class,
+                'route'          => 'login.read',
+                'extractor'      => ReflectionHydrator::class
+            ],
         ];
     }
 }
