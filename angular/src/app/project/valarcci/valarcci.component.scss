@@ -1,0 +1,29 @@
+.center {
+  margin: auto;
+  width: 15%;
+  padding: 16px;
+  font-size: 200%;
+}
+
+.service-card {
+  /* max-width: 400px; */
+  padding: 100px;
+}
+
+.inline-block {
+  display: inline-block;
+  max-width: 200px;
+}
+
+.tab {
+  padding-left: 20px;
+}
+
+
+.content > mat-card {
+  width: 200px;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+}
