@@ -32,15 +32,36 @@
     </span>
   </a>
 
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
     <mat-icon>favorite</mat-icon>
   </button></a>
 
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
     <mat-icon>shopping_cart</mat-icon>
   </button></a>
 
 </mat-toolbar>
-<mat-toolbar>
 
+<mat-toolbar>
+  <form class="product-form">
+    <mat-form-field class="product-full-width">
+      <input type="text"
+         placeholder="Pick one"
+         aria-label="Number"
+         matInput
+         [formControl]="formControl"
+         [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filterOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
 </mat-toolbar>
+
+<!--
+{{ holdOptions }}
+<p></p>
+{{ dataSource }}
+-->
