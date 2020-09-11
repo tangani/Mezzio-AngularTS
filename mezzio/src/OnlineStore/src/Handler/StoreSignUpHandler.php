@@ -31,11 +31,13 @@ class StoreSignUpHandler implements RequestHandlerInterface
     {
         $this->entityManager        =  $entityManager;
         $this->halResponseFactory   =  $halResponseFactory;
-        $this->resourceGenerator    = $resourceGenerator;
+        $this->resourceGenerator    =  $resourceGenerator;
     }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
+        return new JsonResponse("You did get here");
+
         $result = [];
         $requestBody = $request->getParsedBody()['Request']['SignUp'];
 
@@ -104,6 +106,7 @@ class StoreSignUpHandler implements RequestHandlerInterface
             }
         }
 
+        return new JsonResponse("Nothing to see here");
         // Create and return a response
     }
 }

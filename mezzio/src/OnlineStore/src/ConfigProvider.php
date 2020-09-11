@@ -52,7 +52,8 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
-                Handler\StoreLoginHandler::class => Handler\StoreLoginHandlerFactory::class,
+                Handler\StoreLoginHandler::class  => Handler\StoreLoginHandlerFactory::class,
+                Handler\StoreSignUpHandler::class => Handler\StoreSignUpHandlerFactory::class,
             ],
         ];
     }
@@ -69,7 +70,7 @@ class ConfigProvider
         ];
     }
 
-    private function getDoctrineEntities(): array
+    public function getDoctrineEntities(): array
     {
         return [
             'driver' => [
@@ -82,13 +83,13 @@ class ConfigProvider
                 'onlineStore_entity' => [
                     'class' => AnnotationDriver::class,
                     'cache' => 'array',
-                    'paths' => [__DIR__ . 'Entity'],
+                    'paths' => [__DIR__ . '/Entity'],
                 ],
             ],
         ];
     }
 
-    private function getHalMetadataMap()
+    public function getHalMetadataMap()
     {
         return [
             [

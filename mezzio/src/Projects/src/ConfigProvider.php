@@ -52,12 +52,12 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
-                Handler\ProjectsAuthHandler::class => Handler\ProjectsAuthHandlerFactory::class,
+                Handler\ProjectsAuthHandler::class   => Handler\ProjectsAuthHandlerFactory::class,
                 Handler\ProjectsCreateHandler::class => Handler\ProjectsCreateHandlerFactory::class,
                 Handler\ProjectsSignupHandler::class => Handler\ProjectsSignupHandlerFactory::class,
-                Handler\ProjectsLoginHandler::class => Handler\ProjectsLoginHandlerFactory::class,
-                Handler\ProjectsReadHandler::class => Handler\ProjectsReadHandlerFactory::class,
-                Handler\ProjectsListHandler::class => Handler\ProjectsListHandlerFactory::class,
+                Handler\ProjectsLoginHandler::class  => Handler\ProjectsLoginHandlerFactory::class,
+                Handler\ProjectsReadHandler::class   => Handler\ProjectsReadHandlerFactory::class,
+                Handler\ProjectsListHandler::class   => Handler\ProjectsListHandlerFactory::class,
                 Handler\ProjectsUpdateHandler::class => Handler\ProjectsUpdateHandlerFactory::class,
             ],
         ];

@@ -42,6 +42,7 @@ class ProjectsSignupHandler implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
 
+        return new JsonResponse("You did get here");
 
         $result = [];
         $requestBody = $request->getParsedBody()['Request']['SignUp'];
