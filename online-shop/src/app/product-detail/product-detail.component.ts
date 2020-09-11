@@ -31,6 +31,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   dataSource;
   productCapture;
 
+  cartProducts = 0;
+
   buttonTextState = 'shown';
   buttonText = 'ADD TO CART';
   transitionButtonText = 'ADD TO CART';
@@ -66,6 +68,10 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
   onAddToCart(id) {
     // Kick off the first transition
+    this.cartProducts += 1;
+    sessionStorage.setItem('cartCounter', this.cartProducts.toString());
+    console.log("Added an item");
+
     if (id == "cart") {
       console.log(id);
       this.buttonTextState = 'transitioning';
@@ -83,6 +89,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         this.transitionButtonText = 'ADD TO CART';
       }, 3600);
     }
+
 
 
   }

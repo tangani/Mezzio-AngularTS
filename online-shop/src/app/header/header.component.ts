@@ -24,6 +24,13 @@ export class HeaderComponent implements OnInit {
   filterOptions: Observable<string[]>;
   options: string[];
 
+  cartProducts = 0;
+  selectedProducts;
+  AddedCartProducts;
+
+  // cartProducts = localStorage.getItem('clickCounter');
+  //if (sessionStorage.getItem('clickCounter') == null) {}
+
   constructor(
     private dialog: MatDialog,
     private productsService: ProductsService
@@ -44,6 +51,8 @@ export class HeaderComponent implements OnInit {
         );
       }
     });
+    sessionStorage.setItem('cartCounter', this.cartProducts.toString());
+    this.AddedCartProducts = sessionStorage.getItem('cartCounter');
   }
 
   openLoginForm() {

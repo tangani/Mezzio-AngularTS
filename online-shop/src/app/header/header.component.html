@@ -37,7 +37,11 @@
   </button></a>
 
   <a mat-button routerLink='/cart' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
-    <mat-icon>shopping_cart</mat-icon>
+
+    <div>
+      <mat-icon>shopping_cart</mat-icon>
+      {{AddedCartProducts}}
+    </div>
   </button></a>
 
 </mat-toolbar>
