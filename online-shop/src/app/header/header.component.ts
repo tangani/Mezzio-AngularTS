@@ -8,6 +8,8 @@ import { Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
 import { FormControl } from "@angular/forms";
 
+
+
 import { ProductsService } from "../services/products.service";
 
 @Component({
@@ -42,8 +44,6 @@ export class HeaderComponent implements OnInit {
         );
       }
     });
-
-
   }
 
   openLoginForm() {
@@ -59,5 +59,6 @@ export class HeaderComponent implements OnInit {
 
     return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
   }
+
 
 }

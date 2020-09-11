@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Valarcii</a>
+  <a mat-button routerLink='/home' routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Valarcii</a>
   <span class="flex-spacer"></span>
   <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span>Sign In</a>
   <a mat-button (click)="openRegisterForm()"><span class="fa fa-sign-in fa-lg"></span>Join Us</a>
-  <a mat-button routerLink='#'  routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Orders</a>
+  <a mat-button routerLink='/orders'  routerLinkActive="active"><span class="fa fa-info fa-lg"></span> Orders</a>
   <a>
     <span class="fa fa-list fa-lg">
       <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
@@ -32,11 +32,11 @@
     </span>
   </a>
 
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
+  <a mat-button routerLink='/wishlist' routerLinkActive="active"><span class="fa fa-list fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
     <mat-icon>favorite</mat-icon>
   </button></a>
 
-  <a mat-button routerLink='#' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
+  <a mat-button routerLink='/cart' routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> <button mat-icon-button color="warn" aria-label="Heart icon">
     <mat-icon>shopping_cart</mat-icon>
   </button></a>
 
